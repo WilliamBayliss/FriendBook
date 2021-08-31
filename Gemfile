@@ -27,6 +27,9 @@ gem 'devise'
 # Use Bulma CSS classes
 gem 'bulma'
 
+# Use rack-livereload to reload live in browser
+gem "rack-livereload", group: :development
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
