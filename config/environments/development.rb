@@ -9,6 +9,10 @@ Rails.application.configure do
   config.cache_classes = false
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+
+  # Add rack-livereload middleware to Rails middleware stack
+  config.middleware.insert_before Rack::Runtime, Rack::LiveReload
+
   # Do not eager load code on boot.
   config.eager_load = false
 
