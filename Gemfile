@@ -30,6 +30,9 @@ gem 'bulma'
 # Use rack-livereload to reload live in browser
 gem "rack-livereload", group: :development
 
+# Use OMNIauth for sign-in through Facebook
+gem 'omniauth-facebook'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
