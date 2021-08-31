@@ -13,4 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ #navbar-section {
+     background-color: rgb(43, 160, 255);
+ }
+ #navbar-brand-text {
+     color: white;
+ }
  @import "bulma";
