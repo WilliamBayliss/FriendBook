@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 # Use Bulma CSS classes
 gem 'bulma'
+# Use simple form
+gem 'simple_form'
 
 # Use rack-livereload to reload live in browser
 gem "rack-livereload", group: :development
