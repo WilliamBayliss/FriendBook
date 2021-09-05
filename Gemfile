@@ -32,6 +32,7 @@ gem 'simple_form'
 # Use rack-livereload to reload live in browser
 gem "rack-livereload", group: :development
 
+
 # Use OMNIauth for sign-in through Facebook
 gem 'omniauth-facebook'
 
