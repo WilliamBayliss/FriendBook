@@ -7,9 +7,6 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore Facebook API Keys env file
-/facebook_keys.env
-
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
