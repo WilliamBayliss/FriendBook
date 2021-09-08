@@ -16,6 +16,8 @@
 # Ignore Spring fiiles.
 /spring/*.pid
 
+config/credentials.yml.enc
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
