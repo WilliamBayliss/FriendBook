@@ -35,6 +35,7 @@ gem "rack-livereload", group: :development
 
 # Use OMNIauth for sign-in through Facebook
 gem 'omniauth-facebook'
+gem "omniauth-rails_csrf_protection"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
