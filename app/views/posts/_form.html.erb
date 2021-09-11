@@ -1,17 +1,9 @@
-<%= form_with(model: post) do |form| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-        <% post.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
+<%= simple_form_for :post do |form| %>
+  <div class="control">
+    <%= form.input :content, label: false, placeholder: "What's on your mind?", wrapper_html: { class: "input is-rounded is-large" } %>
   </div>
+  <div class="control">
+    <%= form.button :submit %>
+  </div>
+
 <% end %>
