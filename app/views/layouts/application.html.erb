@@ -23,6 +23,13 @@
             <h1 class="title is-3" id="navbar-brand-text">Friendbook</h1>
           </a>
         </div>
+        <% if user_signed_in? %>
+        <div class="navbar-end">
+          <a href="<% destroy_user_session_path %>" class="navbar-item">
+            <h1 class="title is-2" id="navbar-brand-text">Logout</h1>          
+          </a>
+        </div>
+        <% end %>
       </nav>
     </section>
 
