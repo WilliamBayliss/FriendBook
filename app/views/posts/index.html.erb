@@ -1,25 +1,49 @@
 <p id="notice"><%= notice %></p>
-<div class="columns is-centered">
-  <div class="column" id="user-profile-card">
   
-  </div>
-  <div class="column" id="posts-column">
-    <div class="container">
-      
-      <div class="card">
-        <%= render 'form', post: @new_post %>
-      </div>
-    </div>
-    <div class="container">
-      <% @posts.each do |post| %>
+  <section class="section">
+    <div class="columns is-centered">
+
+      <div class="column is-quarter" id="user-profile-card">
         <div class="card">
+          <div class="card-header">
+           <a href="">
+              <%= User.first.name %>
+           </a>
+          </div>
           <div class="card-content">
-            <p>
-              <%= post.content %>
-            </p>  
+            OOOOO
           </div>
         </div>
-      <% end %>
+      </div>
+      <div class="column" id="posts-column">
+        <div class="card">
+          <%= render 'form', post: @new_post %>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="container">
+        <% @posts.each do |post| %>
+          <div class="card">
+            <div class="card-header">
+              <a href="<%  %>">
+
+              </a>
+            </div>
+            <div class="card-content">
+              <p>
+                <%= post.content %>
+              </p>  
+            </div>
+            <div class="card-footer">
+              <%= button_to "♡ #{ post.likes.count }", like_post_url(post), method: :put %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>  
 </div>
+
