@@ -1,9 +1,9 @@
 <%= simple_form_for :post do |form| %>
   <div class="control">
+    <%= form.full_error :token %>
     <%= form.input :content, label: false, placeholder: "What's on your mind?", wrapper_html: { class: "input is-rounded is-large" } %>
   </div>
   <div class="control">
     <%= form.button :submit %>
   </div>
-
 <% end %>
