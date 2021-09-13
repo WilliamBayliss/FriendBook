@@ -40,6 +40,9 @@
             <div class="card-footer">
               <%= button_to "♡ #{ post.likes.count }", like_post_url(post), method: :put %>
             </div>
+            <div class="card-footer">
+              <%= render 'comments/form', comment: post.comments.build %>
+            </div>
           </div>
         <% end %>
       </div>
