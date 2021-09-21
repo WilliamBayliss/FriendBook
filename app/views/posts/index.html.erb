@@ -26,22 +26,29 @@
     <div class="columns is-centered">
       <div class="container">
         <% @posts.each do |post| %>
-          <div class="card">
-            <div class="card-header">
-              <a href="<%  %>">
-
-              </a>
-            </div>
-            <div class="card-content">
-              <p>
-                <%= post.content %>
-              </p>  
-            </div>
-            <div class="card-footer">
-              <%= button_to "♡ #{ post.likes.count }", like_post_url(post), method: :put %>
-            </div>
-            <div class="card-footer">
-              <%= render 'comments/form', comment: post.comments.new %>
+          <div class="block">
+            <div class="card">
+              <div class="card-header">
+                <a href="<%  %>">
+  
+                </a>
+              </div>
+              <div class="card-content">
+                <p>
+                  <%= post.content %>
+                </p>  
+              </div>
+              <div class="card-footer">
+                <%= button_to "♡ #{ post.likes.count }", like_post_url(post), method: :put %>
+              </div>
+              <div class="card">
+                <%= render 'comments', post: post %>
+              </div>
+  
+  
+              <div class="card-footer">
+                <%= render 'comments/form', comment: post.comments.new %>
+              </div>
             </div>
           </div>
         <% end %>
