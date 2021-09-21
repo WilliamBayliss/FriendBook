@@ -29,7 +29,9 @@
           <div class="block">
             <div class="card">
               <div class="card-header">
-                <%= link_to post.user.name, user_path(post.user.id) %>
+                <div class="columns">
+                  <%= link_to post.user.name, user_path(post.user.id) %>
+                </div>
               </div>
               <div class="card-content">
                 <p>
