@@ -1,61 +1,32 @@
-<p id="notice"><%= notice %></p>
-  
-  <section class="section">
-    <div class="columns is-centered">
-
-      <div class="column is-quarter" id="user-profile-card">
+<div class="columns is-centered">
+  <div class="container">
+    <% @posts.each do |post| %>
+      <div class="block">
         <div class="card">
           <div class="card-header">
-           <a href="">
-              <%= User.first.name %>
-           </a>
-          </div>
-          <div class="card-content">
-            OOOOO
-          </div>
-        </div>
-      </div>
-      <div class="column" id="posts-column">
-        <div class="card">
-          <%= render 'form', post: @new_post %>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="columns is-centered">
-      <div class="container">
-        <% @posts.each do |post| %>
-          <div class="block">
-            <div class="card">
-              <div class="card-header">
-                <div class="columns">
-                  <%= link_to post.user.name, user_path(post.user.id) %>
-                </div>
-              </div>
-              <div class="card-content">
-                <p>
-                  <%= post.content %>
-                </p>  
-              </div>
-              <div class="card-footer">
-                <%= button_to "♡ #{ post.likes.count }", like_post_url(post), method: :put %>
-              </div>
-              <% unless post.comments.nil? %>
-                <div class="card">
-                  <%= render 'comments', post: post %>
-                </div>
-              <% end %>
-
-
-              <div class="card-footer">
-                <%= render 'comments/form', comment: post.comments.new %>
-              </div>
+            <div class="columns">
+              <%= link_to post.user.name, user_path(post.user.id) %>
             </div>
           </div>
-        <% end %>
+          <div class="card-content">
+            <p>
+              <%= post.content %>
+            </p>  
+          </div>
+          <div class="card-footer">
+            <%= button_to "♡ #{ post.likes.count }", like_post_url(post), method: :put %>
+          </div>
+          <% unless post.comments.nil? %>
+            <div class="card">
+              <%= render 'posts/comments', post: post %>
+            </div>
+          <% end %>
+          <div class="card-footer">
+            <%= render 'comments/form', comment: post.comments.new %>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>  
+    <% end %>
+  </div>
 </div>
 
