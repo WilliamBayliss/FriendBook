@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+  
+  <section class="section">
+    <div class="columns is-centered">
+
+      <div class="column is-quarter" id="user-profile-card">
+        <div class="card">
+          <div class="card-header">
+           <a href="">
+              <%= User.first.name %>
+           </a>
+          </div>
+          <div class="card-content">
+            OOOOO
+          </div>
+        </div>
+      </div>
+      <div class="column" id="posts-column">
+        <div class="card">
+          <%= render template: 'posts/new' %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <%= render template: 'posts/index' %>
+  </section>  
+</div>
